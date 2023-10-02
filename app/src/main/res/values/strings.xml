@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">mycloudmap</string>
+    <string name="marker_chile">chile</string>
+    <string name="marker_new">nueva ubicacion</string>
+    <string name="guardar_ubicacion">Guardar Ubicacion</string>
+    <string name="registrar_usuario">REGISTRAR USUARIO</string>
+    <string name="password">Ingrese Contraseña...</string>
+    <string name="email">Email</string>
+    <string name="nombre">Nombre</string>
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="send_signIn">YA TENGO CUENTA</string>
+    <string name="txtViewName">NombreUsuario</string>
+    <string name="textViewMail">Correo Usuario</string>
+    <string name="android_sdk_api_key">AIzaSyCpIqh5iD3HKD8qQBwkQoSs3sjbjaUA-_A</string>
+    <string name="label_from">Direccion Origen: </string>
+    <string name="label_to">Direccion Destino</string>
+    <string name="modificarDestino">Modificar</string>
+    <string name="modificarOrigen">Modificar</string>
+    <string name="cerrar_sesion">CERRAR SESION</string>
+    <string name="guardarUbicacion">Guardar Ubicación</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="distancia">Distancia:</string>
+    <string name="costo_de_despacho">Costo de Despacho:</string>
+    <string name="guardarRecorrido">Guardar Recorrido</string>
+</resources>

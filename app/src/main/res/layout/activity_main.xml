@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txtOrigen"
+        android:layout_width="356dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_from"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnOrigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:text="@string/modificarOrigen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrigen"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtDestino"
+        android:layout_width="380dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/label_to"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOrigen"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:text="@string/modificarDestino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDestino"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtLatitud"
+        android:layout_width="393dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/latitud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCostoDeDespacho"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtLongitud"
+        android:layout_width="394dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/longitud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLatitud"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="396dp"
+        android:layout_height="328dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387"
+        map:cameraZoom="10"
+        map:uiRotateGestures="true"
+        map:uiZoomControls="true"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnGuardarUbicacion"
+        android:layout_width="193dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="guardarUbicacion"
+        android:text="@string/guardarUbicacion"
+        android:textColor="#C3C830"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnGuardarRecorrido"
+        android:layout_width="193dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="56dp"
+        android:onClick="guardarRecorrido"
+        android:text="@string/guardarRecorrido"
+        android:textColor="#C3C830"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="196dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/cerrar_sesion"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.772"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardarUbicacion"
+        app:layout_constraintTop_toBottomOf="@+id/txtDistancia"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtDistancia"
+        android:layout_width="398dp"
+        android:layout_height="22dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/distancia"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/txtCostoDeDespacho"
+        android:layout_width="396dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/costo_de_despacho"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/txtDistancia"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp" />
+    <!--<TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/txtViewName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="700dp" />
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/textViewMail"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="673dp" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
